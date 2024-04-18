@@ -11,3 +11,14 @@ function galleryCreate() {
 }
 
 galleryCreate();
+
+const imageLinks = document.querySelectorAll(".gallery__link");
+imageLinks.forEach(function (link, index) {
+  link.addEventListener("click", function (event) {
+    event.preventDefault();
+    const instance = basicLightbox.create(`
+      <img src="${galleryItems[index].original}" width="800" height="600">
+    `);
+    instance.show();
+  });
+});
