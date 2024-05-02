@@ -11,6 +11,7 @@ function galleryCreate() {
 }
 
 galleryCreate();
+
 var lightbox = new SimpleLightbox(".gallery a", {
   captions: true,
   captionSelector: "img",
